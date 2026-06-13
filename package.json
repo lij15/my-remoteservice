@@ -1,0 +1,25 @@
+{
+  "name": "my-remoteservice",
+  "version": "1.0.0",
+  "dependencies": {
+    "@sap-cloud-sdk/connectivity": "^4.7.0",
+    "@sap-cloud-sdk/http-client": "^4.7.0",
+    "@sap-cloud-sdk/resilience": "^4.7.0",
+    "@sap/cds": "^9"
+  },
+  "cds": {
+    "requires": {
+      "SupplierService": {
+        "kind": "odata",
+        "model": "srv/external/SupplierService"
+      }
+    }
+  },
+  "devDependencies": {
+    "@cap-js/sqlite": "^2"
+  },
+  "scripts": {
+    "start": "cds-serve"
+  },
+  "private": true
+}

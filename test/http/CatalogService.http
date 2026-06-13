@@ -1,0 +1,65 @@
+@server=http://localhost:4004
+@username=alice
+@password=
+
+
+### Books
+# @name Books_GET
+GET {{server}}/odata/v4/catalog/Books
+Authorization: Basic {{username}}:{{password}}
+
+
+### Books
+# @name Books_POST
+POST {{server}}/odata/v4/catalog/Books
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "ID": "19719403-e1fb-469c-b205-28e3105476ee",
+  "title": "title-19719403",
+  "price": 2853131.92,
+  "supplierID": "D-19719403",
+  "createdAt": "2018-08-31T15:00:00.000Z",
+  "createdBy": "createdBy.bqnl7@example.org",
+  "modifiedAt": "2011-12-29T15:00:00.000Z",
+  "modifiedBy": "modifiedBy.bqnl7@example.org"
+}
+
+
+### Books
+# @name Books_PATCH
+PATCH {{server}}/odata/v4/catalog/Books/19719403-e1fb-469c-b205-28e3105476ee
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "ID": "19719403-e1fb-469c-b205-28e3105476ee",
+  "title": "title-19719403",
+  "price": 2853131.92,
+  "supplierID": "D-19719403",
+  "createdAt": "2018-08-31T15:00:00.000Z",
+  "createdBy": "createdBy.bqnl7@example.org",
+  "modifiedAt": "2011-12-29T15:00:00.000Z",
+  "modifiedBy": "modifiedBy.bqnl7@example.org"
+}
+
+
+### Books
+# @name Books_DELETE
+DELETE {{server}}/odata/v4/catalog/Books/19719403-e1fb-469c-b205-28e3105476ee
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+
+
+### Suppliers
+# @name Suppliers_GET
+GET {{server}}/odata/v4/supplier/Suppliers
+Authorization: Basic {{username}}:{{password}}
+
+
+### getSupplierInfo
+# @name getSupplierInfo
+GET {{server}}/odata/v4/catalog/Books(ID=b0000001-0000-0000-0000-000000000001)/getSupplierInfo()
+Authorization: Basic {{username}}:{{password}}

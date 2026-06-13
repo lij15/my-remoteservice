@@ -1,0 +1,4 @@
+ID,title,price,supplierID,createdAt,createdBy,modifiedAt,modifiedBy
+b0000001-0000-0000-0000-000000000001,Clean Code,38.00,SUP01
+b0000001-0000-0000-0000-000000000002,The Pragmatic Programmer,45.00,SUP02
+b0000001-0000-0000-0000-000000000003,Refactoring,42.00,SUP01
