@@ -11,7 +11,16 @@
     "requires": {
       "SupplierService": {
         "kind": "odata",
-        "model": "srv/external/SupplierService"
+        "model": "srv/external/SupplierService",
+
+        "[production]": {
+          "credentials": {
+            "url": "https://real-supplier-system.example.com/odata/v4/SupplierService",
+            "authentication": "BasicAuthentication",
+            "username": "{{SUPPLIER_USER}}",
+            "password": "{{SUPPLIER_PASSWORD}}"
+          }
+        }
       }
     }
   },
